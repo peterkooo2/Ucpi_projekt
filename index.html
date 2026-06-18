@@ -80,62 +80,94 @@
                             Menu
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="kontakt.html">Kontakt</a></li>
-                            <li><a class="dropdown-item" href="https://www.spsoa.cz/" target="_blank">school site</a>
+                            <li><a class="dropdown-item" id="btnKontakt">Kontakt</a></li>
+                            <li><a class="dropdown-item" href="https://www.spsoa.cz/" target="_blank">stránka školy</a>
                             </li>
                         </ul>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <button class="btn btn-outline-success" type="submit">Hledat</button>
                 </form>
             </div>
         </div>
     </nav>
-        <div class="container text-center" style="justify-content: space-around;">
-            <div class="row">
-                <div class="col">
-                    <div class="card"
-                        style="width: 18rem; text-align: center; grid-row-start: 2; grid-column-start: 2;  width: fit-content; height: fit-content;">
-                        <img src="sources/imgs/pic_1.png" class="card-img-top" alt="4fotky"
-                            style="height: 200px; width: 300px;">
-                        <div class="card-body">
-                            <h5 class="card-title" style="text-align: center;">Já</h5>
-                            <p class="card-text" style="text-align: center;">Základní věci o mně</p>
-                            <a href="me.html" class="btn btn-primary">Vstoupit</a>
-                        </div>
+    <div class="container text-center" style="justify-content: space-around;">
+        <div class="row">
+            <div class="col">
+                <div class="card"
+                    style="width: 18rem; text-align: center; grid-row-start: 2; grid-column-start: 2;  width: fit-content; height: fit-content;">
+                    <img src="sources/imgs/pic_1.png" class="card-img-top" alt="4fotky"
+                        style="height: 200px; width: 300px;">
+                    <div class="card-body">
+                        <h5 class="card-title" style="text-align: center;">Já</h5>
+                        <p class="card-text" style="text-align: center;">Základní věci o mně</p>
+                        <a href="me.html" class="btn btn-primary">Vstoupit</a>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card"
-                        style="align-items: center; width: 18rem; text-align: center;  grid-row-start: 2; grid-column-start: 3; width: fit-content; height: fit-content;">
-                        <img src="sources/imgs/spsoa_logo_big.png" class="card-img-top" alt="..."
-                            style="height: 200px; width: 300px;">
-                        <div class="card-body">
-                            <h5 class="card-title">Škola</h5>
-                            <p class="card-text">Základní věci o mojí škole</p>
-                            <a href="school.html" class="btn btn-primary">Vstoupit</a>
-                        </div>
+            </div>
+            <div class="col">
+                <div class="card"
+                    style="align-items: center; width: 18rem; text-align: center;  grid-row-start: 2; grid-column-start: 3; width: fit-content; height: fit-content;">
+                    <img src="sources/imgs/spsoa_logo_big.png" class="card-img-top" alt="..."
+                        style="height: 200px; width: 300px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Škola</h5>
+                        <p class="card-text">Základní věci o mojí škole</p>
+                        <a href="school.html" class="btn btn-primary">Vstoupit</a>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card"
-                        style="width: 18rem; text-align: center; grid-row-start: 2; grid-column-start: 4;  width: fit-content; height: fit-content;">
-                        <img src="sources/imgs/pic_2.png" class="card-img-top" alt="4_fotky_loga"
-                            style="height: 200px; width: 300px;">
-                        <div class="card-body">
-                            <h5 class="card-title">Kam se chci posunout</h5>
-                            <p class="card-text">Moje životní plány</p>
-                            <a href="future.html" class="btn btn-primary">Vstoupit</a>
-                        </div>
+            </div>
+            <div class="col">
+                <div class="card"
+                    style="width: 18rem; text-align: center; grid-row-start: 2; grid-column-start: 4;  width: fit-content; height: fit-content;">
+                    <img src="sources/imgs/pic_2.png" class="card-img-top" alt="4_fotky_loga"
+                        style="height: 200px; width: 300px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Kam se chci posunout</h5>
+                        <p class="card-text">Moje životní plány</p>
+                        <a href="future.html" class="btn btn-primary">Vstoupit</a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" id="toastKontakt">
+            <div class="toast-body">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-header">
+                        Kontakt:
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Jméno: Jan Novák</li>
+                        <li class="list-group-item">Adresa: U Lesa 125, 792 01 Bruntál</li>
+                        <li class="list-group-item">Telefon: +420 777 123 456</li>
+                        <li class="list-group-item">E-mail: jan.novak.it@studentmail.cz</li>
+                    </ul>
+                </div>
+                <div class="mt-2 pt-2 border-top">
+                    <button type="button" class="btn btn-primary btn-sm">Napsat (bude přidáno možná...)</button>
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="toast">Zavřít</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+
+    <script>
+        document.getElementById('btnKontakt').addEventListener('click', function (e) {
+            e.preventDefault();
+            var toastElement = document.getElementById('toastKontakt');
+            var toast = new bootstrap.Toast(toastElement);
+            toast.show();
+        });
+    </script>
 
 
 </body>
