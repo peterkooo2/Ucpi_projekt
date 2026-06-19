@@ -32,7 +32,6 @@
 
         .spinning-logo {
             width: 150px;
-
             animation: spin 2s linear infinite;
         }
 
@@ -58,6 +57,7 @@
             document.body.classList.add("loaded");
         });
     </script>
+
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
@@ -86,13 +86,14 @@
                         </ul>
                     </li>
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                <form class="d-flex" role="search" onsubmit="vyhledat(event)">
+                    <input class="form-control me-2" type="search" placeholder="Hledat..." aria-label="Search" />
                     <button class="btn btn-outline-success" type="submit">Hledat</button>
                 </form>
             </div>
         </div>
     </nav>
+
     <div class="container text-center" style="justify-content: space-around;">
         <div class="row">
             <div class="col">
@@ -167,8 +168,30 @@
             var toast = new bootstrap.Toast(toastElement);
             toast.show();
         });
-    </script>
 
+        function vyhledat(event) {
+            event.preventDefault(); // Prevents page reload
+
+            let text = document.querySelector('input[type="search"]').value.toLowerCase().trim();
+
+            const routes = {
+                "škola": "school.html",
+                "skola": "school.html",
+                "já": "me.html",
+                "ja": "me.html",
+                "budoucnost": "future.html",
+                "home": "index.html",
+                "domů": "index.html",
+                "domu": "index.html"
+            };
+
+            if (routes[text]) {
+                window.location.href = routes[text];
+            } else {
+                alert("Nic nebylo nalezeno. Zkuste zadat např. 'škola', 'já' nebo 'budoucnost'.");
+            }
+        }
+    </script>
 
 </body>
 

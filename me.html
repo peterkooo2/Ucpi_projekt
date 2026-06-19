@@ -101,7 +101,8 @@
         <div class="card" style="width: 18rem; justify-content: center; width: 100%;">
             <div class="card-body">
                 <h5 class="card-title" style="text-align: center;">Já</h5>
-                <h6 class="card-subtitle mb-2 text-body-secondary" style="text-align: center;">Základní informace o mně</h6>
+                <h6 class="card-subtitle mb-2 text-body-secondary" style="text-align: center;">Základní informace o mně
+                </h6>
                 <p class="text-center">Jmenuji se Jan Novák. Je mi 16 let a studuji první ročník střední školy se
                     zaměřením
                     na
@@ -122,6 +123,37 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <script>
+        document.getElementById('btnKontakt').addEventListener('click', function (e) {
+            e.preventDefault();
+            var toastElement = document.getElementById('toastKontakt');
+            var toast = new bootstrap.Toast(toastElement);
+            toast.show();
+        });
+
+        function vyhledat(event) {
+            event.preventDefault(); // Prevents page reload
+
+            let text = document.querySelector('input[type="search"]').value.toLowerCase().trim();
+
+            const routes = {
+                "škola": "school.html",
+                "skola": "school.html",
+                "já": "me.html",
+                "ja": "me.html",
+                "budoucnost": "future.html",
+                "home": "index.html",
+                "domů": "index.html",
+                "domu": "index.html"
+            };
+
+            if (routes[text]) {
+                window.location.href = routes[text];
+            } else {
+                alert("Nic nebylo nalezeno. Zkuste zadat např. 'škola', 'já' nebo 'budoucnost'.");
+            }
+        }
+    </script>
 </body>
 
 </html>
