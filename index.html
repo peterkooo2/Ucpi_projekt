@@ -50,6 +50,59 @@
             opacity: 0;
             pointer-events: none;
         }
+
+        .search-preview {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            max-height: 200px;
+            overflow-y: auto;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            z-index: 1050;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-top: 4px;
+        }
+
+        .search-preview-item {
+            padding: 8px 12px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .search-preview-item:hover {
+            background-color: #f8f9ff;
+        }
+
+        .search-preview-item i {
+            margin-right: 8px;
+            font-size: 1.2rem;
+            color: #6c757d;
+        }
+
+        .search-clear-btn {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #dc3545;
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 0 4px;
+            line-height: 1;
+            z-index: 10;
+            opacity: 0.7;
+        }
+
+        .search-clear-btn:hover {
+            opacity: 1;
+        }
     </style>
 
     <script>
@@ -87,7 +140,11 @@
                     </li>
                 </ul>
                 <form class="d-flex" role="search" onsubmit="vyhledat(event)">
-                    <input class="form-control me-2" type="search" placeholder="Hledat..." aria-label="Search" />
+                    <div class="position-relative flex-grow-1">
+                        <input class="form-control me-2" type="search" id="searchInput" placeholder="Hledat..." aria-label="Search" autocomplete="off" />
+                        <button type="button" class="search-clear-btn" onclick="clearSearch()" aria-label="Vymazat">×</button>
+                        <div id="searchPreview" class="search-preview dropdown-menu w-100" style="display: none;"></div>
+                    </div>
                     <button class="btn btn-outline-success" type="submit">Hledat</button>
                 </form>
             </div>
@@ -135,6 +192,7 @@
         </div>
     </div>
 
+
     <div class="toast-container position-fixed bottom-0 end-0 p-3">
         <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" id="toastKontakt">
             <div class="toast-body">
@@ -168,30 +226,9 @@
             var toast = new bootstrap.Toast(toastElement);
             toast.show();
         });
-
-        function vyhledat(event) {
-            event.preventDefault(); // Prevents page reload
-
-            let text = document.querySelector('input[type="search"]').value.toLowerCase().trim();
-
-            const routes = {
-                "škola": "school.html",
-                "skola": "school.html",
-                "já": "me.html",
-                "ja": "me.html",
-                "budoucnost": "future.html",
-                "home": "index.html",
-                "domů": "index.html",
-                "domu": "index.html"
-            };
-
-            if (routes[text]) {
-                window.location.href = routes[text];
-            } else {
-                alert("Nic nebylo nalezeno. Zkuste zadat např. 'škola', 'já' nebo 'budoucnost'.");
-            }
-        }
     </script>
+
+    <script src="js/search.js"></script>
 
 </body>
 
