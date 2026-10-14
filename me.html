@@ -63,7 +63,7 @@
             border: 1px solid #ddd;
             border-radius: 4px;
             z-index: 1050;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             margin-top: 4px;
         }
 
@@ -144,8 +144,10 @@
                 </ul>
                 <form class="d-flex" role="search" onsubmit="vyhledat(event)">
                     <div class="position-relative flex-grow-1">
-                        <input class="form-control me-2" type="search" id="searchInput" placeholder="Search" aria-label="Search" autocomplete="off" />
-                        <button type="button" class="search-clear-btn" onclick="clearSearch()" aria-label="Clear">×</button>
+                        <input class="form-control me-2" type="search" id="searchInput" placeholder="Search"
+                            aria-label="Search" autocomplete="off" />
+                        <button type="button" class="search-clear-btn" onclick="clearSearch()"
+                            aria-label="Clear">×</button>
                         <div id="searchPreview" class="search-preview dropdown-menu w-100" style="display: none;"></div>
                     </div>
                     <button class="btn btn-outline-success" type="submit">Search</button>
@@ -157,22 +159,22 @@
     <div class="position-absolute top-50 start-50 translate-middle">
         <div class="card" style="width: 18rem; justify-content: center; width: 100%;">
             <div class="card-body">
-                <h5 class="card-title" style="text-align: center;">Já</h5>
-                <h6 class="card-subtitle mb-2 text-body-secondary" style="text-align: center;">Základní informace o mně
+                <h5 class="card-title" style="text-align: center;">Citace</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary" style="text-align: center;">Základní informace o
+                    citacích
                 </h6>
-                <p class="text-center">Jmenuji se Jan Novák. Je mi 16 let a studuji první ročník střední školy se
-                    zaměřením
-                    na
-                    informační technologie. Bydlím v Bruntále a mezi mé hlavní zájmy patří programování, počítačový
-                    hardware a
-                    moderní technologie.
+                <p class="text-center">
 
-                    Ve volném čase se věnuji tvorbě jednoduchých programů, hraní počítačových her a sledování novinek ze
-                    světa IT.
-                    Ve škole mě nejvíce baví informatika, programování a práce s počítačovými sítěmi.
-                    Mým cílem je získat kvalitní znalosti v oblasti informačních technologií a v budoucnu pracovat jako
-                    softwarový
-                    vývojář nebo správce počítačových sítí.
+                    V HTML se citace používají k označení textu, který pochází od někoho jiného.<br>
+                    &lt;q> -- používá se pro krátkou citaci uvnitř textu. Prohlížeč obvykle automaticky přidá uvozovky.
+                    <br>
+                    &lt;p>Učitel řekl: &lt;q>Učte se každý den.&lt;/q>&lt;/p><br>
+                    &lt;blockquote> -- používá se pro delší citace, které jsou oddělené od hlavního textu a obvykle se
+                    zobrazují jako samostatný blok. <br>
+                    &lt;blockquote>Učení je klíčem k novým znalostem. &lt;/blockquote><br>
+                    Rozdíl: &lt;q> je pro krátké citace uvnitř věty, zatímco &lt;blockquote> je pro delší, samostatné
+                    citace.
+
                 </p>
             </div>
         </div>

@@ -6,28 +6,28 @@
         "škola": "school.html",
         "skola": "school.html",
         "school": "school.html",
-        "já": "me.html",
-        "ja": "me.html",
-        "me": "me.html",
-        "budoucnost": "future.html",
-        "future": "future.html",
+        "citace": "me.html",
+        "Citece": "me.html",
+        "Quote": "me.html",
+        "komentare": "future.html",
+        "komentáře": "future.html",
         "home": "index.html",
         "domů": "index.html",
         "domu": "index.html"
     };
 
     const routeLabels = {
-        "škola": "🎓 Škola",
-        "skola": "🎓 Škola",
-        "school": "🎓 Škola",
-        "já": "👤 Já",
-        "ja": "👤 Já",
-        "me": "👤 Já",
-        "budoucnost": "🚀 Budoucnost",
-        "future": "🚀 Budoucnost",
-        "home": "🏠 Home",
-        "domů": "🏠 Domů",
-        "domu": "🏠 Domů"
+        "škola": "Škola",
+        "skola": "Škola",
+        "school": "Škola",
+        "citace": "Citace",
+        "Citace": "Citace",
+        "quote": "Citace",
+        "komentare": "Komentáře",
+        "komentáře": "Komentáře",
+        "home": "Home",
+        "domů": "Domů",
+        "domu": "Domů"
     };
 
     const searchInput = document.getElementById('searchInput');
@@ -48,7 +48,7 @@
         matches.forEach((match) => {
             const item = document.createElement("div");
             item.className = "search-preview-item";
-            item.textContent = (routeLabels[match] || match) + " \u2192 " + routes[match];
+            item.textContent = (routeLabels[match] || match);
             item.addEventListener("mousedown", function (e) {
                 // mousedown instead of click so the input doesn't lose focus first
                 e.preventDefault();
@@ -136,7 +136,7 @@
             navigateTo(text);
         } else {
             alert(
-                "Nic nebylo nalezeno. Zkuste zadat nap\u0159. 'škola', 'já' nebo 'budoucnost'."
+                "Nic nebylo nalezeno. Zkuste zadat např. 'škola', 'citace' nebo 'komentáře'."
             );
             searchPreview.style.display = "none";
         }

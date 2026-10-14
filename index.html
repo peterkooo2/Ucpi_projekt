@@ -139,10 +139,11 @@
                         </ul>
                     </li>
                 </ul>
+                <!--SEARCH BAR-->
                 <form class="d-flex" role="search" onsubmit="vyhledat(event)">
                     <div class="position-relative flex-grow-1">
                         <input class="form-control me-2" type="search" id="searchInput" placeholder="Hledat..." aria-label="Search" autocomplete="off" />
-                        <button type="button" class="search-clear-btn" onclick="clearSearch()" aria-label="Vymazat">×</button>
+                        <button type="button" class="search-clear-btn" onclick="clearSearch()" aria-label="Vymazat">x</button>
                         <div id="searchPreview" class="search-preview dropdown-menu w-100" style="display: none;"></div>
                     </div>
                     <button class="btn btn-outline-success" type="submit">Hledat</button>
@@ -150,7 +151,7 @@
             </div>
         </div>
     </nav>
-
+    <!--KARTA S TEXTEM-->
     <div class="container text-center" style="justify-content: space-around;">
         <div class="row">
             <div class="col">
@@ -159,8 +160,8 @@
                     <img src="sources/imgs/pic_1.png" class="card-img-top" alt="4fotky"
                         style="height: 200px; width: 300px;">
                     <div class="card-body">
-                        <h5 class="card-title" style="text-align: center;">Já</h5>
-                        <p class="card-text" style="text-align: center;">Základní věci o mně</p>
+                        <h5 class="card-title" style="text-align: center;">Citace</h5>
+                        <p class="card-text" style="text-align: center;">Základní věci o citacích</p>
                         <a href="me.html" class="btn btn-primary">Vstoupit</a>
                     </div>
                 </div>
@@ -183,8 +184,8 @@
                     <img src="sources/imgs/pic_2.png" class="card-img-top" alt="4_fotky_loga"
                         style="height: 200px; width: 300px;">
                     <div class="card-body">
-                        <h5 class="card-title">Kam se chci posunout</h5>
-                        <p class="card-text">Moje životní plány</p>
+                        <h5 class="card-title">Komentáře</h5>
+                        <p class="card-text">Základní věci o Komentářích</p>
                         <a href="future.html" class="btn btn-primary">Vstoupit</a>
                     </div>
                 </div>
@@ -192,7 +193,7 @@
         </div>
     </div>
 
-
+    <!--KARTA KONTAKTY-->
     <div class="toast-container position-fixed bottom-0 end-0 p-3">
         <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" id="toastKontakt">
             <div class="toast-body">
@@ -201,14 +202,14 @@
                         Kontakt:
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Jméno: Jan Novák</li>
-                        <li class="list-group-item">Adresa: U Lesa 125, 792 01 Bruntál</li>
+                        <li class="list-group-item">Jméno: Petr Hlaváč</li>
+                        <li class="list-group-item">Adresa: 12345 Krnov</li>
                         <li class="list-group-item">Telefon: +420 777 123 456</li>
-                        <li class="list-group-item">E-mail: jan.novak.it@studentmail.cz</li>
+                        <li class="list-group-item">E-mail: hlavac.petr@st.spsoa.cz</li>
                     </ul>
                 </div>
                 <div class="mt-2 pt-2 border-top">
-                    <button type="button" class="btn btn-primary btn-sm">Napsat (bude přidáno možná...)</button>
+                    <button type="button" class="btn btn-primary btn-sm">Napsat(mozna bude přidáno...)</button>
                     <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="toast">Zavřít</button>
                 </div>
             </div>
